@@ -31,4 +31,10 @@ describe Astronaut, type: :model do
       expect(Astronaut.average_age.round(2)).to eq(average.round(2))
     end
   end
+
+  describe 'Instances Methods' do
+    it ".sorted_missions" do
+      expect(@astronaut_1.sorted_missions).to eq([@mission_2,@mission_1,@mission_3])
+    end
+  end
 end
